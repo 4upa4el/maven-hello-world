@@ -20,14 +20,9 @@ jobs:
         distribution: 'temurin'
         cache: maven
         token: ${{ secrets.githubactions }}
-    - name: Copy
-      run: cp -r myapp/* .
     - name: Display
       run: ls
     - name: Automated Github Action Maven Version Bump
       id: bump
       uses: mickem/gh-action-bump-maven-version@v1.0.0
-      with:
-        pom-file: 'myapp/pom.xml'
-      
       
