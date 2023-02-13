@@ -27,6 +27,10 @@ jobs:
       uses: mickem/gh-action-bump-maven-version@v1.0.0
     - name: Deploy
       run: mvn compile
-    - name: Display After
+    - name: Display Hello-World
       run: java -cp target/classes com.myapp.App
+    - name: Package
+      run: |
+        mvn package
+        java -cp "target/myapp-${{@NEW_VERSION@}}.jar" com.myapp.App
       
