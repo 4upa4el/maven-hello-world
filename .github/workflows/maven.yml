@@ -26,11 +26,7 @@ jobs:
       id: bump
       uses: mickem/gh-action-bump-maven-version@v1.0.0
     - name: Deploy
-      run: mvn compile
+      run: mvn deploy -e
     - name: Display Hello-World
       run: java -cp target/classes com.myapp.App
-    - name: Package
-      run: |
-        mvn package
-        java -cp "target/myapp-${{env.targetVersion}}.jar" com.myapp.App
       
