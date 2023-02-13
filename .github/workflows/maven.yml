@@ -28,5 +28,6 @@ jobs:
       uses: avides/actions-project-version-check@v1.3.0
       id: myversion
       with:
+        token: ${{ secrets.githubactions }}
         file-to-check: pom.xml
 
