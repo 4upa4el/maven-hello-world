@@ -28,7 +28,7 @@ jobs:
     - name: Deploy
       run: mvn compile
     - name: Display After
-      run: ls target/generated-sources
+      run: ls target/generated-sources/annotations
     - name: Display After 2
-      run: ls target/classes
+      run: ls target/classes/com
       
