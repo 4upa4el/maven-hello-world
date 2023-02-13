@@ -5,14 +5,13 @@ on:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
-
+defaults:
+      run:
+        working-directory: myapp
 jobs:
   build:
 
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: myapp
 
     steps:
     - uses: actions/checkout@v3
