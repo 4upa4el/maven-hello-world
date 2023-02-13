@@ -28,5 +28,7 @@ jobs:
     - name: Deploy
       run: mvn compile
     - name: Display After
-      run: ls target/
+      run: ls target/generated-sources
+    - name: Display After 2
+      run: ls target/classes
       
