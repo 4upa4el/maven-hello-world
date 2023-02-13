@@ -25,3 +25,4 @@ jobs:
       uses: mickem/gh-action-bump-maven-version@v1.0.0
       with:
         pom-file: 'myapp/pom.xml'
+        run: mvn -e
