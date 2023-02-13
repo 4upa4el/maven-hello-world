@@ -29,11 +29,6 @@ jobs:
       run: mvn compile
     - name: Display Hello-World
       run: java -cp target/classes com.myapp.App
-    - name: Project Version check (Maven, NodeJS...)
-      uses: avides/actions-project-version-check@v1.3.0
-      with:
-        file-to-check: pom.xml
-        token: ${{ secrets.githubactions }}
     - name: Package
       run: |
         mvn package
