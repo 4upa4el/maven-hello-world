@@ -50,15 +50,12 @@ jobs:
     needs: [build]
 
     steps:
-    - uses: actions/checkout@v3
-      with:
-        token: ${{ secrets.githubactions }}
     - name: Project Version check (Maven, NodeJS...)
       uses: avides/actions-project-version-check@v1.3.0
       id: myversion
       with:
         token: ${{ secrets.githubactions }}
-        file-to-check: pom.xml
+        file-to-check: ./pom.xml
         only-return-version: true
     - name: Run container
       run: |
