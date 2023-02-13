@@ -19,6 +19,7 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: maven
+        token: ${{ secrets.githubactions }}
     - name: Automated Github Action Maven Version Bump
       id: bump
       uses: mickem/gh-action-bump-maven-version@v1.0.0
