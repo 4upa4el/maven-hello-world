@@ -22,4 +22,4 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file myapp/pom.xml
     - name: Display
-      run: echo ls
+      run: ls
