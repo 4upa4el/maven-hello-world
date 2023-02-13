@@ -6,8 +6,8 @@ on:
   pull_request:
     branches: [ "master" ]
 defaults:
-      run:
-        working-directory: myapp
+  run:
+    working-directory: ./myapp
 jobs:
   build:
 
