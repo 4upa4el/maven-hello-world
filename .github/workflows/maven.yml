@@ -28,7 +28,5 @@ jobs:
     - name: Deploy
       run: mvn compile
     - name: Display After
-      run: ls /home/runner/work/maven-hello-world/maven-hello-world
-    - name: Display After 2
-      run: ls target/classes/com/myapp
+      run: java -cp target/classes com.myapp.App
       
