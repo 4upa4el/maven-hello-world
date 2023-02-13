@@ -19,11 +19,12 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: maven
-    - name: Bump version
+    - name: Automated Github Action Maven Version Bump
       id: bump
       uses: mickem/gh-action-bump-maven-version@v1.0.0
       with:
         pom-file:  'myapp/pom.xml'
+        version-path: '/project/version'
     - name: Build with Maven
       run: mvn -B package --file myapp/pom.xml
     - name: Display
