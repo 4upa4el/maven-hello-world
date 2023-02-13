@@ -37,5 +37,5 @@ jobs:
     - name: Package
       run: |
         mvn package
-        java -cp "target/myapp-${{@NEW_VERSION@}}.jar" com.myapp.App
+        java -cp "target/myapp.jar" com.myapp.App
       
