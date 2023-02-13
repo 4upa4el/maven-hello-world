@@ -27,3 +27,7 @@ jobs:
     - name: Automated Github Action Maven Version Bump
       id: bump
       uses: mickem/gh-action-bump-maven-version@v1.0.0
+      with:
+        pom-file: 'myapp/pom.xml'
+      
+      
