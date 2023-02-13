@@ -47,6 +47,7 @@ jobs:
         tag: "hello-world-${{ steps.myversion.outputs.version }}"
   run:
     runs-on: ubuntu-latest
+    needs: [build]
 
     steps:
     - name: Run container
