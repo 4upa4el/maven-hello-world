@@ -5,9 +5,7 @@ on:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
-defaults:
-  run:
-    working-directory: ./myapp
+
 jobs:
   build:
 
@@ -22,6 +20,10 @@ jobs:
         distribution: 'temurin'
         cache: maven
         token: ${{ secrets.githubactions }}
+    - name: Copy
+      run: cp myapp/* .
+    - name: Display
+      run: ls
     - name: Automated Github Action Maven Version Bump
       id: bump
       uses: mickem/gh-action-bump-maven-version@v1.0.0
