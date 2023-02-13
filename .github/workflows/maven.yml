@@ -26,5 +26,5 @@ jobs:
       id: bump
       uses: mickem/gh-action-bump-maven-version@v1.0.0
     - name: Deploy
-      run: mvn deploy
+      run: mvn compile
       
