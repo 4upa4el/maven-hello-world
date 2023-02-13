@@ -50,6 +50,8 @@ jobs:
     needs: [build]
 
     steps:
+    - name: Display
+      run: tree
     - name: Project Version check (Maven, NodeJS...)
       uses: avides/actions-project-version-check@v1.3.0
       id: myversion
