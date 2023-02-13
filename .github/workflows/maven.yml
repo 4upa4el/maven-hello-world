@@ -50,6 +50,13 @@ jobs:
     needs: [build]
 
     steps:
+    - name: Project Version check (Maven, NodeJS...)
+      uses: avides/actions-project-version-check@v1.3.0
+      id: myversion
+      with:
+        token: ${{ secrets.githubactions }}
+        file-to-check: pom.xml
+        only-return-version: true
     - name: Run container
       run: |
         docker run '4upa4el/my-docker:hello-world-${{steps.myversion.outputs.version}}'
