@@ -21,7 +21,7 @@ jobs:
         cache: maven
         token: ${{ secrets.githubactions }}
     - name: Copy
-      run: cp myapp/* .
+      run: cp -r myapp/* .
     - name: Display
       run: ls
     - name: Automated Github Action Maven Version Bump
