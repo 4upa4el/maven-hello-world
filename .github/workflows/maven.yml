@@ -32,7 +32,7 @@ jobs:
     - name: Project Version check (Maven, NodeJS...)
       uses: avides/actions-project-version-check@v1.3.0
       with:
-        only-return-version: 'pom.xml'
+        file-to-check: pom.xml
         token: ${{ secrets.githubactions }}
     - name: Package
       run: |
