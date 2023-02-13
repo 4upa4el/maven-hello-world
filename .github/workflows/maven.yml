@@ -31,8 +31,8 @@ jobs:
       run: java -cp target/classes com.myapp.App
     - name: Project Version check (Maven, NodeJS...)
       uses: avides/actions-project-version-check@v1.3.0
-        with:
-          only-return-version
+      with:
+        only-return-version: 'pom.xml'
 
     - name: Package
       run: |
