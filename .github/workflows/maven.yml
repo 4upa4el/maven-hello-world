@@ -30,4 +30,5 @@ jobs:
       with:
         token: ${{ secrets.githubactions }}
         file-to-check: pom.xml
+        only-return-version: true
 
