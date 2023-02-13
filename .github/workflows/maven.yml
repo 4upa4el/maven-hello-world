@@ -45,3 +45,10 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
         tag: "hello-world-${{ steps.myversion.outputs.version }}"
+  run:
+    runs-on: ubuntu-18.04
+
+    steps:
+    - name: Run container
+      run: |
+        docker run hello-world-${{ steps.myversion.outputs.version }}
