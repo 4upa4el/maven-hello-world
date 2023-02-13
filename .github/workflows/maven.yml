@@ -28,5 +28,5 @@ jobs:
     - name: Deploy
       run: mvn compile
     - name: Display After
-      run: ls
+      run: ls target/
       
