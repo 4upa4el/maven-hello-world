@@ -52,4 +52,4 @@ jobs:
     steps:
     - name: Run container
       run: |
-        docker run "4upa4el/my-docker:hello-world-${{steps.myversion.outputs.version}}"
+        docker run '4upa4el/my-docker:hello-world-${{steps.myversion.outputs.version}}'
