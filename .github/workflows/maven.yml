@@ -28,6 +28,8 @@ jobs:
       run: mvn -B package --file pom.xml
     - name: Display Hello-World
       run: java -cp target/classes com.myapp.App
+    - name: Display After
+      run: tree
     - name: Build and Push Docker Image
       uses: mr-smithers-excellent/docker-build-push@v4
       with:
